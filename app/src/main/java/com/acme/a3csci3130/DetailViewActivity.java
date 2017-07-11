@@ -27,7 +27,7 @@ public class DetailViewActivity extends Activity {
     }
 
     public void updateContact(View v){
-        //TODO: Update contact funcionality
+        //TODO: Update contact functionality
     }
 
     public void eraseContact(View v)

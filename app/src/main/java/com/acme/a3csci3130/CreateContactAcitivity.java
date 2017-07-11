@@ -18,7 +18,7 @@ public class CreateContactAcitivity extends Activity {
         setContentView(R.layout.activity_create_contact_acitivity);
         //Get the app wide shared variables
         appState = ((MyApplicationData) getApplicationContext());
-
+        // connect to all of the buttons and ExitText views
         submitButton = (Button) findViewById(R.id.submitButton);
         nameField = (EditText) findViewById(R.id.name);
         emailField = (EditText) findViewById(R.id.email);
@@ -28,7 +28,9 @@ public class CreateContactAcitivity extends Activity {
         provinceField = (EditText) findViewById(R.id.province);
 
     }
-
+    /**
+     * Event for when submitInfo button is pressed
+     * */
     public void submitInfoButton(View v) {
         //each entry needs a unique ID
         String personID = appState.firebaseReference.push().getKey();
