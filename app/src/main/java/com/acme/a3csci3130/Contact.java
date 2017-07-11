@@ -19,6 +19,7 @@ public class Contact implements Serializable {
     public  String uid;
     public  String name;
     public  String email;
+    public  String businessNumber;
     public  String primaryBusiness;
     public  String address;
     public  String province;
@@ -30,20 +31,21 @@ public class Contact implements Serializable {
     /**
      * Constructor for creating a Contact object given all required values
      * */
-    public Contact(String uid, String name, String email, String primaryBusiness){
+    public Contact(String uid, String name, String email, String businessNumber){
         this.uid = uid;
         this.name = name;
         this.email = email;
-        this.primaryBusiness = primaryBusiness;
+        this.businessNumber = businessNumber;
     }
 
     /**
      * Constructor for creating a Contact object given all possible values
      * */
-    public Contact(String uid, String name, String email, String primaryBusiness, String address, String province){
+    public Contact(String uid, String name, String email, String businessNumber, String primaryBusiness, String address, String province){
         this.uid = uid;
         this.name = name;
         this.email = email;
+        this.businessNumber = businessNumber;
         this.primaryBusiness = primaryBusiness;
         this.address = address;
         this.province = province;
@@ -55,7 +57,10 @@ public class Contact implements Serializable {
         result.put("uid", uid);
         result.put("name", name);
         result.put("email", email);
-
+        result.put("businessNumber", businessNumber);
+        result.put("primaryBusiness", primaryBusiness);
+        result.put("address", address);
+        result.put("province", province);
         return result;
     }
 }
