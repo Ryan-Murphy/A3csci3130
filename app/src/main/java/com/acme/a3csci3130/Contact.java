@@ -12,20 +12,41 @@ import java.util.Map;
  * Firebase databse. This is converted to a JSON format
  */
 
+
+
 public class Contact implements Serializable {
 
     public  String uid;
     public  String name;
     public  String email;
+    public  String primaryBusiness;
+    public  String address;
+    public  String province;
 
     public Contact() {
         // Default constructor required for calls to DataSnapshot.getValue
     }
 
-    public Contact(String uid, String name, String email){
+    /**
+     * Constructor for creating a Contact object given all required values
+     * */
+    public Contact(String uid, String name, String email, String primaryBusiness){
         this.uid = uid;
         this.name = name;
         this.email = email;
+        this.primaryBusiness = primaryBusiness;
+    }
+
+    /**
+     * Constructor for creating a Contact object given all possible values
+     * */
+    public Contact(String uid, String name, String email, String primaryBusiness, String address, String province){
+        this.uid = uid;
+        this.name = name;
+        this.email = email;
+        this.primaryBusiness = primaryBusiness;
+        this.address = address;
+        this.province = province;
     }
 
     @Exclude
