@@ -64,6 +64,8 @@ public class DetailViewActivity extends Activity {
         contactUpdates.put("province", provinceField.getText().toString());
         // Update the contact object
         contactReference.updateChildren(contactUpdates);
+
+        finish();
     }
     /**
     * Will remove a specified contact which is currently in the view
@@ -72,5 +74,7 @@ public class DetailViewActivity extends Activity {
     {
         // Removes the current contact from the database
         appState.firebaseReference.child(receivedPersonInfo.uid).removeValue();
+
+        finish();
     }
 }
